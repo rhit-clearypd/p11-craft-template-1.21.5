@@ -1,6 +1,7 @@
 package net.pc2.p11craft;
 
 import net.fabricmc.api.ModInitializer;
+import net.pc2.p11craft.block.ModBlocks;
 import net.pc2.p11craft.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,5 +19,6 @@ public class P11Craft implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
