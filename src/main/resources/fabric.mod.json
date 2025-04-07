@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "p11-craft",
+	"version": "${version}",
+	"name": "P11 Craft",
+	"description": "This is a mod by ~p11studios~, established on 4/6/25. Following Kaupenjoe's YT fabric tutorial",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/p11-craft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.pc2.p11craft.P11Craft"
+		],
+		"client": [
+			"net.pc2.p11craft.P11CraftClient"
+		],
+		"fabric-datagen": [
+			"net.pc2.p11craft.P11CraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"p11-craft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.21.5",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
