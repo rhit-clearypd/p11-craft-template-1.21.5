@@ -18,10 +18,32 @@ import net.pc2.p11craft.P11Craft;
 
 public class ModBlocks {
 
+    // ADD NEW BLOCKS HERE
+
+    // Ruby Block
     public static final Block RUBY_BLOCK = registerBlock("ruby_block",
-            AbstractBlock.Settings.create().strength(4f)
+            AbstractBlock.Settings.create()
+                    .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.METAL));
+    // Block of Raw Ruby
+    public static final Block RAW_RUBY_BLOCK = registerBlock("raw_ruby_block",
+            AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.METAL));
+
+    // ADD NEW BLOCKS HERE
+    public static void registerModBlocks(){
+        P11Craft.LOGGER.info("Registering Mod Blocks for " + P11Craft.MOD_ID);
+
+        // register blocks here
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK));
+
+    }
+
+    // HELPER METHODS BELOW: no need to add anything -------------------------------------------------------------------
 
     // helper methods to register blocks
     public static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
@@ -31,16 +53,10 @@ public class ModBlocks {
         return Registry.register(Registries.BLOCK, Identifier.of(P11Craft.MOD_ID, name), block);
     }
 
+    // helper function to register block items
     private static void registerBlockItem(String name, Block block) {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID, name));
         BlockItem item = new BlockItem(block, new Item.Settings().registryKey(key));
         Registry.register(Registries.ITEM, key, item);
-    }
-
-    public static void registerModBlocks(){
-        P11Craft.LOGGER.info("Registering Mod Blocks for " + P11Craft.MOD_ID);
-
-        // register blocks here
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK));
     }
 }
