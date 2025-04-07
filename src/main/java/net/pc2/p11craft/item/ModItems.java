@@ -14,18 +14,29 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
-    // p11: added ".registryKey...RegistryKeys.ITEM" after Item.Settings() based on comments
-    public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(
-            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"ruby")))));
-
-
+    // helper class for creating the items below
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(P11Craft.MOD_ID, name), item);
     }
+
+    // p11: for items, added ".registryKey...RegistryKeys.ITEM" after Item.Settings() based on comments
+
+    // Ruby item
+    public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"ruby")))));
+    // Raw Ruby item
+    public static final Item RAW_RUBY = registerItem("raw_ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"raw_ruby")))));
+    // Cheese item (custom PNG)
+    public static final Item CHEESE = registerItem("cheese", new Item(new Item.Settings().registryKey(RegistryKey.of(
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"cheese")))));
 
     public static void registerModItems() {
         P11Craft.LOGGER.info("Registering Mod Items for " + P11Craft.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(RUBY));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(RAW_RUBY));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(CHEESE));
+
     }
 }
