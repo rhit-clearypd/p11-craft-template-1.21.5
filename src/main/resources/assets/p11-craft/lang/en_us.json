@@ -5,5 +5,8 @@
 
   "item.p11-craft.ruby_block": "Block of Ruby",
   "item.p11-craft.raw_ruby_block": "Block of Raw Ruby",
-  "item.p11-craft.white_bricks_block": "Block of White Bricks"
+  "item.p11-craft.white_bricks_block": "Block of White Bricks",
+
+  "itemgroup.p11-craft.p11_craft_items": "P11Craft Items",
+  "itemgroup.p11-craft.p11_craft_blocks": "P11Craft Blocks"
 }
