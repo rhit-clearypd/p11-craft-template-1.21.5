@@ -32,6 +32,12 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.METAL));
+    // Block of White Bricks
+    public static final Block WHITE_BRICKS_BLOCK = registerBlock("white_bricks_block",
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.DEEPSLATE_BRICKS));
 
     // ADD NEW BLOCKS HERE
     public static void registerModBlocks(){
@@ -40,6 +46,7 @@ public class ModBlocks {
         // register blocks here
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.WHITE_BRICKS_BLOCK));
 
     }
 
