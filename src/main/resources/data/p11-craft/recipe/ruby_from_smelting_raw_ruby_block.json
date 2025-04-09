@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.2,
+  "group": "p11_craft_items",
+  "ingredient": "p11-craft:raw_ruby_block",
+  "result": {
+    "id": "p11-craft:ruby"
+  }
+}

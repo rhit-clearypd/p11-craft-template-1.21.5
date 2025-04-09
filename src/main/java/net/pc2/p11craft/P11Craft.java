@@ -25,3 +25,6 @@ public class P11Craft implements ModInitializer {
 		ModBlocks.registerModBlocks();
 	}
 }
+
+// p11: for crafting recipes, go to external libraries and expand, scroll until you see wall of all the same, go up 2-3 to
+// 		minecraft merged, open minecaft merged, data, minecraft, recipe

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "items",
+  "category": "building",
+  "ingredients": [
+    [
+      "minecraft:potato"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:diamond",
+    "count": 9
+  }
+}
