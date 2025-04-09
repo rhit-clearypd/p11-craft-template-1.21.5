@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "p11-craft:block/ruby_ore_block"
+  }
+}

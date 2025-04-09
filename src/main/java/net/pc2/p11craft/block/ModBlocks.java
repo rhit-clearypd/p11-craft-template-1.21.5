@@ -38,6 +38,11 @@ public class ModBlocks {
                     .strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE_BRICKS));
+    public static final Block RUBY_ORE_BLOCK = registerBlock("ruby_ore_block",
+            AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.STONE));
 
     // ADD NEW BLOCKS HERE
     public static void registerModBlocks(){
@@ -47,6 +52,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.WHITE_BRICKS_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_ORE_BLOCK));
 
     }
 
