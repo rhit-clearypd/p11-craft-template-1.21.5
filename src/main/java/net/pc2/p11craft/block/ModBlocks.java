@@ -3,6 +3,7 @@ package net.pc2.p11craft.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -43,6 +44,7 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE));
+            // tried to make it an ExperienceDroppingBlock, but it didn't work
 
     // ADD NEW BLOCKS HERE
     public static void registerModBlocks(){
