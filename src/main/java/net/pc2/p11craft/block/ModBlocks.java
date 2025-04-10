@@ -45,6 +45,12 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE));
             // tried to make it an ExperienceDroppingBlock, but it didn't work
+        public static final Block BLUE_PLANKS_BLOCK = registerBlock("blue_planks_block",
+            AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .sounds(BlockSoundGroup.WOOD)
+        );
+
 
     // ADD NEW BLOCKS HERE
     public static void registerModBlocks(){
@@ -55,6 +61,7 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.WHITE_BRICKS_BLOCK));
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_ORE_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.BLUE_PLANKS_BLOCK));
 
     }
 
