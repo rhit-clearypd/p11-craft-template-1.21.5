@@ -8,7 +8,7 @@ import net.minecraft.item.ItemUsageContext;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvent;
+//import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.world.World;
@@ -46,6 +46,11 @@ public class ChiselItem extends Item {
 
                 // plays a sound
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
+
+                // particle effects? (doesn't work)
+                //world.addBlockBreakParticles(context.getBlockPos(), clickedBlock.getDefaultState());
+                //((ServerWorld) world).addBlockBreakParticles(context.getBlockPos(), CHISEL_MAP.get(clickedBlock).getDefaultState());
+                //world.getBlockState(context.getBlockPos()).getBlock()
 
             }
         }
