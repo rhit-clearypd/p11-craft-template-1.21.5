@@ -16,8 +16,10 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.pc2.p11craft.P11Craft;
+import net.pc2.p11craft.block.custom.MagicBlock;
 
-    // p11: to see original minecraft block methods, shift+shift, type in blocks, check the box for files not in this project
+
+// p11: to see original minecraft block methods, shift+shift, type in blocks, check the box for files not in this project
 
 public class ModBlocks {
 
@@ -51,10 +53,20 @@ public class ModBlocks {
             AbstractBlock.Settings.create()
                     .strength(2f)
                     .sounds(BlockSoundGroup.WOOD));
+
+    //from chatGPT - uses second version of registerBlock that takes name and block that has already been created
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(P11Craft.MOD_ID, "magic_block")))
+                    .strength(4f).requiresTool()));
+
+    // p11 note: finally fixxed it by adding a new register method so we can use the "new Block..." style. Need to try with copy still
+
+
+//    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
+//            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)).getSettings());
+
 //    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
 //            AbstractBlock.Settings.copy(AbstractBlock "bricks")
-//    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
-//            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)));
 //            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS.getDefaultState()))
 
 
@@ -64,23 +76,34 @@ public class ModBlocks {
         P11Craft.LOGGER.info("Registering Mod Blocks for " + P11Craft.MOD_ID);
 
         // register blocks here
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.WHITE_BRICKS_BLOCK));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.RUBY_ORE_BLOCK));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(ModBlocks.BLUE_PLANKS_BLOCK));
-
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(ModBlocks.RUBY_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.RAW_RUBY_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.WHITE_BRICKS_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.RUBY_ORE_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.BLUE_PLANKS_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.MAGIC_BLOCK);
+        });
     }
+
+
 
     // HELPER METHODS BELOW: no need to add anything -------------------------------------------------------------------
 
-    // helper methods to register blocks
+    // helper methods to register blocks (original)
     public static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> key = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(P11Craft.MOD_ID, name));
         Block block = new Block(blockSettings.registryKey(key));
         registerBlockItem(name, block);
         return Registry.register(Registries.BLOCK, Identifier.of(P11Craft.MOD_ID, name), block);
     }
+
+    // secondary version from ChatGPT, now takes in a block that has already been created ("new...")
+    public static Block registerBlock(String name, Block block) {
+        registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(P11Craft.MOD_ID, name), block);
+    }
+
 
     // helper function to register block items
     private static void registerBlockItem(String name, Block block) {

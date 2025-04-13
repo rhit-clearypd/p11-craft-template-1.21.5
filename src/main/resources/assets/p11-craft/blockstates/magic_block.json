@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "p11-craft:block/magic_block"
+    }
+  }
+}

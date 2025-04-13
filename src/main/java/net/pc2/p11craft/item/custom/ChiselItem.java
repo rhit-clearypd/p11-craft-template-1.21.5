@@ -57,4 +57,6 @@ public class ChiselItem extends Item {
 
         return ActionResult.SUCCESS;
     }
+
+    // type "override" to see what else you cna change about a special item
 }

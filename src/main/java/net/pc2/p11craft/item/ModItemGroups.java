@@ -28,12 +28,14 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(()-> new ItemStack(ModBlocks.RUBY_BLOCK))
                     .displayName(Text.translatable("itemgroup.p11-craft.p11_craft_blocks"))
                     .entries((displayContext, entries) -> {
+
+                        // to add new, click in existing line and press Ctrl+D to duplicate the line
                         entries.add(ModBlocks.RUBY_BLOCK);
                         entries.add(ModBlocks.RAW_RUBY_BLOCK);
                         entries.add(ModBlocks.WHITE_BRICKS_BLOCK);
                         entries.add(ModBlocks.RUBY_ORE_BLOCK);
                         entries.add(ModBlocks.BLUE_PLANKS_BLOCK);
-
+                        entries.add(ModBlocks.MAGIC_BLOCK);
                     }).build());
 
     public static void registerItemGroups(){
