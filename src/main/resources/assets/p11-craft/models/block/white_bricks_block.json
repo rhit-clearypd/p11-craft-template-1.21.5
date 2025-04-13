@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "p11-craft:block/white_bricks_block"
+    "all": "p11-craft:block/white_bricks_texture"
   }
 }

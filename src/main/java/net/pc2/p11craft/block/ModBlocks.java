@@ -3,6 +3,8 @@ package net.pc2.p11craft.block;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+//import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -45,11 +47,16 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.STONE));
             // tried to make it an ExperienceDroppingBlock, but it didn't work
-        public static final Block BLUE_PLANKS_BLOCK = registerBlock("blue_planks_block",
+    public static final Block BLUE_PLANKS_BLOCK = registerBlock("blue_planks_block",
             AbstractBlock.Settings.create()
                     .strength(2f)
-                    .sounds(BlockSoundGroup.WOOD)
-        );
+                    .sounds(BlockSoundGroup.WOOD));
+//    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
+//            AbstractBlock.Settings.copy(AbstractBlock "bricks")
+//    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
+//            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)));
+//            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS.getDefaultState()))
+
 
 
     // ADD NEW BLOCKS HERE

@@ -20,6 +20,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.RAW_RUBY);
                         entries.add(ModItems.CHEESE);
+                        entries.add(ModItems.CHISEL);
                     }).build());
 
     public static final ItemGroup P11_CRAFT_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

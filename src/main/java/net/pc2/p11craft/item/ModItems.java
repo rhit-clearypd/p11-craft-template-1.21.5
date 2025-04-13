@@ -11,6 +11,7 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.pc2.p11craft.item.custom.ChiselItem;
 
 public class ModItems {
 
@@ -30,13 +31,19 @@ public class ModItems {
     // Cheese item (custom PNG)
     public static final Item CHEESE = registerItem("cheese", new Item(new Item.Settings().registryKey(RegistryKey.of(
             RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"cheese")))));
+    // Chisel item - create an instance of the custom ChiselItem class
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().registryKey(RegistryKey.of(
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"chisel"))).maxDamage(32)));
 
     public static void registerModItems() {
         P11Craft.LOGGER.info("Registering Mod Items for " + P11Craft.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(RUBY));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(RAW_RUBY));
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> fabricItemGroupEntries.add(CHEESE));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(RUBY);
+            fabricItemGroupEntries.add(RAW_RUBY);
+            fabricItemGroupEntries.add(CHEESE);
+            fabricItemGroupEntries.add(CHISEL);
 
+        });
     }
 }
