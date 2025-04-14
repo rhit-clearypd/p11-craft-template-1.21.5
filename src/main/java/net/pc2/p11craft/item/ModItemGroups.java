@@ -19,8 +19,9 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.RUBY);
                         entries.add(ModItems.RAW_RUBY);
-                        entries.add(ModItems.CHEESE);
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.CHEESE);
+                        entries.add(ModItems.RESINWOOD);
                     }).build());
 
     public static final ItemGroup P11_CRAFT_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,

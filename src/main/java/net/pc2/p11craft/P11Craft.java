@@ -1,6 +1,7 @@
 package net.pc2.p11craft;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.pc2.p11craft.block.ModBlocks;
 import net.pc2.p11craft.item.ModItemGroups;
 import net.pc2.p11craft.item.ModItems;
@@ -23,6 +24,11 @@ public class P11Craft implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		// for fuel items
+		FuelRegistryEvents.BUILD.register((builder, context) -> {
+			builder.add(ModItems.RESINWOOD, 3200);
+		});
 	}
 }
 

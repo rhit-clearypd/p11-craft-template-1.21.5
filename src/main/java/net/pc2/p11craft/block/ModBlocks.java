@@ -59,7 +59,7 @@ public class ModBlocks {
             new MagicBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(P11Craft.MOD_ID, "magic_block")))
                     .strength(4f).requiresTool()));
 
-    // p11 note: finally fixxed it by adding a new register method so we can use the "new Block..." style. Need to try with copy still
+    // p11 note: finally fixed it by adding a new register method so we can use the "new Block..." style. Need to try with copy still
 
 
 //    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",

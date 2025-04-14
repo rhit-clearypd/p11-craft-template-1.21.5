@@ -25,15 +25,21 @@ public class ModItems {
     // Ruby item
     public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(
             RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"ruby")))));
+
     // Raw Ruby item
     public static final Item RAW_RUBY = registerItem("raw_ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(
             RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"raw_ruby")))));
+
     // Cheese item (custom PNG)
     public static final Item CHEESE = registerItem("cheese", new Item(new Item.Settings().registryKey(RegistryKey.of(
-            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"cheese")))));
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"cheese"))).food(ModFoodComponents.CHEESE)));
+
     // Chisel item - create an instance of the custom ChiselItem class
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().registryKey(RegistryKey.of(
             RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"chisel"))).maxDamage(32)));
+
+    public static final Item RESINWOOD = registerItem("resinwood", new Item(new Item.Settings().registryKey(RegistryKey.of(
+            RegistryKeys.ITEM, Identifier.of(P11Craft.MOD_ID,"resinwood")))));
 
     public static void registerModItems() {
         P11Craft.LOGGER.info("Registering Mod Items for " + P11Craft.MOD_ID);
@@ -43,6 +49,7 @@ public class ModItems {
             fabricItemGroupEntries.add(RAW_RUBY);
             fabricItemGroupEntries.add(CHEESE);
             fabricItemGroupEntries.add(CHISEL);
+            fabricItemGroupEntries.add(RESINWOOD);
 
         });
     }
