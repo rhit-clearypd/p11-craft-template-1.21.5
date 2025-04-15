@@ -1,0 +1,7 @@
+// 1.21.5	-999999999-01-01T00:00:00	P11 Craft/Block Loot Tables
+a4388604168f2a29a10782d4e2b7b71d565ebe30 data/p11-craft/loot_table/blocks/blue_planks_block.json
+38a0c3175ed24f3509813db89ecdf82d074c7dc3 data/p11-craft/loot_table/blocks/magic_block.json
+05bb027d27c076c13e1bc91da4a0bcfc881c4937 data/p11-craft/loot_table/blocks/raw_ruby_block.json
+4f684364af155ac89f04dc0b8e0d7df74064e930 data/p11-craft/loot_table/blocks/ruby_block.json
+11de620f4fb98bb5d41f835a6b73c584516217c6 data/p11-craft/loot_table/blocks/ruby_ore_block.json
+a77cf9ebfaa8a63a06dae817fe3379d7a24edc54 data/p11-craft/loot_table/blocks/white_bricks_block.json

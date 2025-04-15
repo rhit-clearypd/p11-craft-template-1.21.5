@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "D": "minecraft:blue_dye",
+    "P": "#minecraft:planks"
+  },
+  "pattern": [
+    "PPP",
+    "PDP",
+    "PPP"
+  ],
+  "result": {
+    "count": 8,
+    "id": "p11-craft:blue_planks_block"
+  }
+}

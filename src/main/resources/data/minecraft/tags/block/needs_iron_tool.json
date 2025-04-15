@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "p11-craft:ruby_block",
-    "p11-craft:raw_ruby_block",
-    "p11-craft:ruby_ore_block"
-  ]
-}

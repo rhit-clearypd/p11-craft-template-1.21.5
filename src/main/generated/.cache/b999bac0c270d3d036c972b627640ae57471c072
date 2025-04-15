@@ -1,0 +1,6 @@
+// 1.21.5	-999999999-01-01T00:00:00	P11 Craft/Tags for minecraft:block
+24f90105afebfb5f1a08078e1d5015a0fc0d4b06 data/minecraft/tags/block/mineable/axe.json
+a540111a496905b4f13e0a26dd47a03d37166797 data/minecraft/tags/block/mineable/pickaxe.json
+c798810ca43616140d41d0354b8b242954e59978 data/minecraft/tags/block/needs_diamond_tool.json
+3266ad3fa729005e2f9c018b68c38d5fe52ff826 data/minecraft/tags/block/needs_iron_tool.json
+b16ee40754d78515cc11f8993eeeaeaf723e52c2 data/minecraft/tags/block/needs_stone_tool.json

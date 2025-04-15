@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:brick",
+    "D": "minecraft:bone_meal"
+  },
+  "pattern": [
+    "BBB",
+    "BDB",
+    "BBB"
+  ],
+  "result": {
+    "count": 2,
+    "id": "p11-craft:white_bricks_block"
+  }
+}

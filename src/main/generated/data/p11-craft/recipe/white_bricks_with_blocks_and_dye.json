@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": "minecraft:bricks",
+    "D": "minecraft:white_dye"
+  },
+  "pattern": [
+    "BBB",
+    "BDB",
+    "BBB"
+  ],
+  "result": {
+    "count": 8,
+    "id": "p11-craft:white_bricks_block"
+  }
+}
