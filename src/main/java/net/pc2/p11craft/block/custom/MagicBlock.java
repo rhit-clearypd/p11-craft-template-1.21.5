@@ -10,11 +10,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.StateManager;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pc2.p11craft.item.ModItems;
+import net.pc2.p11craft.util.ModTags;
 
 public class MagicBlock extends Block {
     public MagicBlock(AbstractBlock.Settings settings) {
@@ -37,11 +39,25 @@ public class MagicBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 
         if(entity instanceof ItemEntity itemEntity) {
-            if(itemEntity.getStack().getItem() == ModItems.RAW_RUBY) {
+            if(isValidItem(itemEntity.getStack())) {    // checks for transformable tag before transforming
                 itemEntity.setStack(new ItemStack(Items.IRON_INGOT, itemEntity.getStack().getCount()));
+
+                // p11 note: UPDATE, for future make it so poisonous_potato -> potato, rotten flesh -> leather, etc.
+                //           probably wanna use Maps for this, I'm keeping this since I just learned how to use tags lol
             }
         }
 
         super.onSteppedOn(world, pos, state, entity);
     }
+
+    // checks if the item thrown onto the block is in the Transformable tag
+    private boolean isValidItem(ItemStack stack) {
+        return stack.isIn(ModTags.Items.TRANSFORMABLE_ITEMS);
+    }
+
+    // this was supposed to be "appendToolTip", but I guess it's changed since
+//    @Override
+//    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+//        super.appendProperties(builder);
+//    }
 }
