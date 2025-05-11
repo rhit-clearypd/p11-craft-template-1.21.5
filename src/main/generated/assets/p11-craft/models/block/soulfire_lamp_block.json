@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "p11_craft:block/soulfire_lamp_block"
+  }
+}

@@ -37,6 +37,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUBY_ORE_BLOCK);
                         entries.add(ModBlocks.BLUE_PLANKS_BLOCK);
                         entries.add(ModBlocks.MAGIC_BLOCK);
+//                        entries.add(ModBlocks.SOULFIRE_LAMP_BLOCK);
                     }).build());
 
     public static void registerItemGroups(){

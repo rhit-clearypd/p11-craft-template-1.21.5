@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "p11_craft:block/soulfire_lamp_block"
+    },
+    "clicked=true": {
+      "model": "p11_craft:block/soulfire_lamp_block_on"
+    }
+  }
+}

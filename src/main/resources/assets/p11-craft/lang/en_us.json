@@ -11,8 +11,10 @@
   "item.p11-craft.ruby_ore_block": "Ruby Ore",
   "item.p11-craft.blue_planks_block": "Blue Planks",
   "item.p11-craft.magic_block": "Magic Block",
+  "item.p11-craft.soulfire_lamp_block": "Soulfire Lamp",
+
 
 
   "itemgroup.p11-craft.p11_craft_items": "P11Craft Items",
-  "itemgroup.p11-craft.p11_craft_blocks": "P11Craft Blocks"
+  "itemgroup.p11-craft.p11_craft_blocks": "P11Craft Blocks",
 }

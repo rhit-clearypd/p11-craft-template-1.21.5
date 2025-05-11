@@ -17,6 +17,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.pc2.p11craft.P11Craft;
 import net.pc2.p11craft.block.custom.MagicBlock;
+import net.pc2.p11craft.block.custom.SoulfireLampBlock;
 
 
 // p11: to see original minecraft block methods, shift+shift, type in blocks, check the box for files not in this project
@@ -61,6 +62,30 @@ public class ModBlocks {
 
     // p11 note: finally fixed it by adding a new register method so we can use the "new Block..." style. Need to try with copy still
 
+//    public static final Block SOULFIRE_LAMP_BLOCK = registerBlock("soulfire_lamp_block",
+//            new SoulfireLampBlock(AbstractBlock.Settings.create()
+//                    .strength(1f)
+//                    .requiresTool()
+//                    .luminance(state -> {
+//                        if (state.contains(SoulfireLampBlock.CLICKED)) {
+//                            return state.get(SoulfireLampBlock.CLICKED) ? 15 : 0;
+//                        }
+//                        return 0;
+//                    })));
+//                    .luminance(state -> state.get(SoulfireLampBlock.CLICKED) ? 15:0)));
+//    public static final Block SOULFIRE_LAMP_BLOCK = registerBlock("soulfire_lamp_block",
+//            new SoulfireLampBlock(AbstractBlock.Settings.copy(Blocks.REDSTONE_LAMP)
+//                    .luminance(state -> state.getOrEmpty(SoulfireLampBlock.CLICKED).orElse(false) ? 15 : 0)
+//            ));
+//    public static final Block SOULFIRE_LAMP_BLOCK = registerBlock("soulfire_lamp_block",
+//            new SoulfireLampBlock(
+//                    AbstractBlock.Settings.create()
+//                            .sounds(BlockSoundGroup.LANTERN)
+//                            .luminance(state -> state.getOrEmpty(SoulfireLampBlock.CLICKED).orElse(false) ? 15 : 0)
+//                            //.luminance(SoulfireLampBlock::getLuminance)
+//            ));
+
+
 
 //    public static final Block DIORITE_BRICKS_BLOCK = registerBlock("diorite_bricks_block",
 //            new Block(AbstractBlock.Settings.copy(Blocks.BRICKS)).getSettings());
@@ -83,12 +108,13 @@ public class ModBlocks {
             fabricItemGroupEntries.add(ModBlocks.RUBY_ORE_BLOCK);
             fabricItemGroupEntries.add(ModBlocks.BLUE_PLANKS_BLOCK);
             fabricItemGroupEntries.add(ModBlocks.MAGIC_BLOCK);
+//            fabricItemGroupEntries.add(ModBlocks.SOULFIRE_LAMP_BLOCK);
         });
     }
 
 
 
-    // HELPER METHODS BELOW: no need to add anything -------------------------------------------------------------------
+//---- HELPER METHODS BELOW: no need to add anything -------------------------------------------------------------------
 
     // helper methods to register blocks (original)
     public static Block registerBlock(String name, AbstractBlock.Settings blockSettings) {
